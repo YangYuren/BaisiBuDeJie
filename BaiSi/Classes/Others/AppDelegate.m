@@ -27,7 +27,7 @@
     
     
     
-    self.window.rootViewController = adVC;
+    self.window.rootViewController = tabBarVc;
     
     //显示窗口
     [self.window makeKeyAndVisible];
