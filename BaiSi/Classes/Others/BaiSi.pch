@@ -30,5 +30,9 @@
 #define iphone67 (XMGScreenH == 667)
 #define iphone55s (XMGScreenH == 568)
 
+//颜色
+#define XMGColor(r,g,b) [UIColor colorWithRed:(r)/256.0 green:(g)/256.0 blue:(b)/256.0 alpha:1]
+//随机产生颜色
+#define XMGRandomColor XMGColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
 
 #endif /* BaiSi_pch */

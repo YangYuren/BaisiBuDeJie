@@ -28,6 +28,7 @@
 		EFC0BE521EACC88C000D4152 /* XMGSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0BE501EACC88C000D4152 /* XMGSubTagCell.m */; };
 		EFC0BE531EACC88C000D4152 /* XMGSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC0BE511EACC88C000D4152 /* XMGSubTagCell.xib */; };
 		EFC0BE551EACEBF4000D4152 /* XMGFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC0BE541EACEBF4000D4152 /* XMGFriendTrendViewController.xib */; };
+		EFC3A2001EB06F2D003D12F4 /* XMGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC3A1FF1EB06F2D003D12F4 /* XMGButton.m */; };
 		EFC635DB1EAE1D2300CC0CCF /* XMGMeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC635DA1EAE1D2300CC0CCF /* XMGMeTableViewController.storyboard */; };
 		EFC635DF1EAE241600CC0CCF /* XMGSquareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC635DD1EAE241600CC0CCF /* XMGSquareCollectionViewCell.m */; };
 		EFC635E01EAE241600CC0CCF /* XMGSquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC635DE1EAE241600CC0CCF /* XMGSquareCollectionViewCell.xib */; };
@@ -120,6 +121,8 @@
 		EFC0BE501EACC88C000D4152 /* XMGSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSubTagCell.m; sourceTree = "<group>"; };
 		EFC0BE511EACC88C000D4152 /* XMGSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGSubTagCell.xib; sourceTree = "<group>"; };
 		EFC0BE541EACEBF4000D4152 /* XMGFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFriendTrendViewController.xib; sourceTree = "<group>"; };
+		EFC3A1FE1EB06F2D003D12F4 /* XMGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGButton.h; sourceTree = "<group>"; };
+		EFC3A1FF1EB06F2D003D12F4 /* XMGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGButton.m; sourceTree = "<group>"; };
 		EFC635DA1EAE1D2300CC0CCF /* XMGMeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XMGMeTableViewController.storyboard; sourceTree = "<group>"; };
 		EFC635DC1EAE241600CC0CCF /* XMGSquareCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSquareCollectionViewCell.h; sourceTree = "<group>"; };
 		EFC635DD1EAE241600CC0CCF /* XMGSquareCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSquareCollectionViewCell.m; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 		EFCFA40E1EAA29A100732EC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFC3A1FE1EB06F2D003D12F4 /* XMGButton.h */,
+				EFC3A1FF1EB06F2D003D12F4 /* XMGButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 				EF6EA8B11EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m in Sources */,
 				EFCFA4421EAA44E500732EC9 /* NSObject+Log.m in Sources */,
 				EFE9872E1EAF881C00FA4D10 /* XMGFileTool.m in Sources */,
+				EFC3A2001EB06F2D003D12F4 /* XMGButton.m in Sources */,
 				EFB5332A1EAB40AA006DF711 /* XMGTabBar.m in Sources */,
 				EFC0BE4E1EACC265000D4152 /* XMGSubTagItem.m in Sources */,
 				EFB5332D1EAB7879006DF711 /* UIView+Frame.m in Sources */,
