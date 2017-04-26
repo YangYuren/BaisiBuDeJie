@@ -1,0 +1,34 @@
+//
+//  BaiSi.pch
+//  BaiSi
+//
+//  Created by Yang on 2017/4/22.
+//  Copyright © 2017年 Yang. All rights reserved.
+//
+
+#ifndef BaiSi_pch
+#define BaiSi_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//存放公用的宏  头文件 自定义Log
+
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+item.h"
+#import "UITextField+placeholder.h"
+/*图片RenderModel操作*/
+#import "UIImage+Ex.h"
+
+#import "XMGNavigationViewController.h"
+
+#import "XMGAdViewController.h"
+
+/**************屏幕适配*******************/
+#define XMGScreenW [UIScreen mainScreen].bounds.size.width
+#define XMGScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone67Plus (XMGScreenH == 736)
+#define iphone67 (XMGScreenH == 667)
+#define iphone55s (XMGScreenH == 568)
+
+
+#endif /* BaiSi_pch */
