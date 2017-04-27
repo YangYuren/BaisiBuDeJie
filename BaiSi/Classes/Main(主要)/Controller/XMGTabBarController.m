@@ -38,8 +38,11 @@
     
     
 }
+//把系统的tabBar换成自己定义的tabBar
 -(void)setupTabBar{
+    //kvc来设置私有的成员变量
     XMGTabBar * tabBar = [[XMGTabBar alloc] init];
+    
     [self setValue:tabBar forKey:@"tabBar"];
 }
 
@@ -53,8 +56,6 @@
     XMGNavigationViewController * nav2 = [[XMGNavigationViewController alloc] initWithRootViewController:new];
     [self addChildViewController:nav2];
     
-//    XMGPublishViewController * publish = [[XMGPublishViewController alloc] init];
-//    [self addChildViewController:publish];
     
     XMGFriendTrendViewController * friendTrend = [[XMGFriendTrendViewController alloc] init];
     XMGNavigationViewController * nav3 = [[XMGNavigationViewController alloc] initWithRootViewController:friendTrend];
@@ -78,16 +79,10 @@
     nav2.tabBarItem.image = [UIImage originalImage:@"tabBar_new_icon"];
     nav2.tabBarItem.selectedImage = [UIImage originalImage:@"tabBar_new_click_icon"];
     
-//    UIViewController * publish = self.childViewControllers[2];
-//    publish.tabBarItem.image = [UIImage originalImage:@"tabBar_publish_icon"];
-//    publish.tabBarItem.selectedImage = [UIImage originalImage:@"tabBar_publish_click_icon"];
-//    publish.tabBarItem.imageInsets = UIEdgeInsetsMake(7, 0, -7, 0);
-    
     XMGNavigationViewController * nav3 = self.childViewControllers[2];
     nav3.tabBarItem.title = @"关注";
     nav3.tabBarItem.image = [UIImage originalImage:@"tabBar_friendTrends_icon"];
     nav3.tabBarItem.selectedImage = [UIImage originalImage:@"tabBar_friendTrends_click_icon"];
-    
     
     XMGNavigationViewController * nav4 = self.childViewControllers[3];
     nav4.tabBarItem.title = @"我";

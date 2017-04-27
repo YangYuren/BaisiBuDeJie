@@ -14,3 +14,7 @@ UIKIT_EXTERN CGFloat const XMGTarBarH;
 UIKIT_EXTERN CGFloat const XMGTitleViewH;
 /* 导航栏的高度 */
 UIKIT_EXTERN CGFloat const XMGNavigatinH;
+/* TabBarButton被重复点击的通知 */
+UIKIT_EXTERN NSString * const XMGTabBarButtonDidRepeatClickNotification;
+/* 标题按钮被重复点击的通知 */
+UIKIT_EXTERN NSString * const XMGTitleButtonDidRepeatClickNotification;

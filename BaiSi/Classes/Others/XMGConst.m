@@ -11,3 +11,7 @@ CGFloat const XMGTarBarH = 49;
 CGFloat const XMGTitleViewH = 35;
 
 CGFloat const XMGNavigatinH = 64;
+
+NSString * const XMGTabBarButtonDidRepeatClickNotification = @"XMGTabBarButtonDidRepeatClickNotification";
+
+NSString * const XMGTitleButtonDidRepeatClickNotification = @"XMGTitleButtonDidRepeatClickNotification";

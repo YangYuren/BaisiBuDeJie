@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BaiSi/Classes/Me(&#x6211;)/Controller/XMGMeTableViewController.m"
-            timestampString = "514788878.405765"
+            timestampString = "514964748.854747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "-set"
             landmarkType = "7">
          </BreakpointContent>

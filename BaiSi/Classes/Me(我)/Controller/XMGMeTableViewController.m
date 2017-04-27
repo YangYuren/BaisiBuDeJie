@@ -38,6 +38,18 @@ static NSInteger const margin = 1;
     self.tableView.sectionHeaderHeight = 0;
     //额外的顶部间距为64 但是第一个cell的y值为35  所以  让额外的顶部间距减去25  相当于向上平移25
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XMGTabBarButtonDidRepeatClickNotification object:nil];
+}
+//监听TabBar按钮重复使用
+-(void)tabBarButtonDidRepeatClick{
+    //判断当前控制器View是否在window中
+    if(self.view.window == nil)return;
+    //刷新数据
+    NSLog(@"Hellow----刷新吧");
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 #pragma mark - collection 代理方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
