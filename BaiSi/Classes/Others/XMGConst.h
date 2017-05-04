@@ -18,3 +18,5 @@ UIKIT_EXTERN CGFloat const XMGNavigatinH;
 UIKIT_EXTERN NSString * const XMGTabBarButtonDidRepeatClickNotification;
 /* 标题按钮被重复点击的通知 */
 UIKIT_EXTERN NSString * const XMGTitleButtonDidRepeatClickNotification;
+/* 公用的URL */
+UIKIT_EXTERN NSString * const XMGCommonURL;

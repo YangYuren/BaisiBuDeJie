@@ -105,12 +105,16 @@
     
 }
 //点击按钮事件
--(void)titleBtnClick:(XMGButton *)btn{
+-(IBAction)titleBtnClick:(XMGButton *)btn{
     //判断上一次按钮是否是当前按钮 重复点击
     if(self.preButton ==btn){
         //发送通知 标题按钮
         [[NSNotificationCenter defaultCenter] postNotificationName:XMGTitleButtonDidRepeatClickNotification object:nil];
     }
+    [self titleButtonClick:btn];
+}
+//处理标题按钮点击
+-(void)titleButtonClick:(XMGButton *)btn{
     //上一个按钮恢复颜色
     self.preButton.selected = NO;
     btn.selected = YES;
@@ -118,11 +122,11 @@
     self.preButton = btn;
     [UIView animateWithDuration:0.25 animations:^{
         //获取文字宽度 先获取文字  在计算文字宽度
-//        NSMutableDictionary * attrs = [NSMutableDictionary dictionary];
-//        attrs[NSFontAttributeName] = btn.titleLabel.font;
-//        self.lineView.xmg_width = [btn.currentTitle sizeWithAttributes:attrs].width;
+        //        NSMutableDictionary * attrs = [NSMutableDictionary dictionary];
+        //        attrs[NSFontAttributeName] = btn.titleLabel.font;
+        //        self.lineView.xmg_width = [btn.currentTitle sizeWithAttributes:attrs].width;
         
-//        //第二种计算方式  直接等于Label的宽度
+        //        //第二种计算方式  直接等于Label的宽度
         self.lineView.xmg_width = btn.titleLabel.xmg_width+10;
         
         //设置中心点
@@ -179,7 +183,8 @@
 //        self.preButton = titleButton;
 //        self.lineView.xmg_width = titleButton.titleLabel.xmg_width+10;
 //        self.lineView.xmg_centerX = titleButton.xmg_centerX;
-        [self titleBtnClick:titleButton];
+//        [self titleBtnClick:titleButton];
+        [self titleButtonClick:titleButton];
         
     }];
 }

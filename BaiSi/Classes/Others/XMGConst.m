@@ -15,3 +15,5 @@ CGFloat const XMGNavigatinH = 64;
 NSString * const XMGTabBarButtonDidRepeatClickNotification = @"XMGTabBarButtonDidRepeatClickNotification";
 
 NSString * const XMGTitleButtonDidRepeatClickNotification = @"XMGTitleButtonDidRepeatClickNotification";
+
+NSString * const XMGCommonURL = @"http://api.budejie.com/api/api_open.php";

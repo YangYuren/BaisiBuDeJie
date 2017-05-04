@@ -7,38 +7,64 @@
 //
 
 #import "XMGAllViewController.h"
+#import <AFNetworking/AFNetworking.h>
+#import <MJExtension/MJExtension.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "XMGTopic.h"
+#import "XMGTopicCell.h"
+
 
 @interface XMGAllViewController ()
+
 @property(nonatomic,weak)UIView * footerView;
 @property(nonatomic,weak)UIView * headerView;
 @property(nonatomic,weak)UILabel * footerLabel;
 @property(nonatomic,weak)UILabel * headerLabel;
 @property(nonatomic,assign,getter=isFooterRefreashing)BOOL footerRefreashing;
 @property(nonatomic,assign,getter=isHeaderRefreashing)BOOL headerRefreashing;
-@property(nonatomic,assign)NSInteger  dataCount;
+//请求管理者
+@property(nonatomic,strong)AFHTTPSessionManager * mgr;
+
+@property(nonatomic,copy)NSString * maxtime;
+
+@property(nonatomic,strong)NSMutableArray<XMGTopic *> * topics;
+
 @end
+//cell重用标识
+static NSString * const XMGTopicCellID = @"XMGTopicCellID";
 
 @implementation XMGAllViewController
-
+-(AFHTTPSessionManager *)mgr{
+    if(_mgr == nil){
+        _mgr = [AFHTTPSessionManager manager];
+    }
+    return _mgr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = XMGRandomColor;
+    self.view.backgroundColor = XMGColor(206, 206, 206);
    
-    
     self.tableView.contentInset = UIEdgeInsetsMake(XMGTitleViewH+XMGNavigatinH, 0, XMGTarBarH, 0);
     //滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     //注册cell
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
+    UINib * nib = [UINib nibWithNibName:NSStringFromClass([XMGTopicCell class]) bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:XMGTopicCellID];
     //监听通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XMGTabBarButtonDidRepeatClickNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XMGTitleButtonDidRepeatClickNotification object:nil];
-    self.dataCount = 7;
+    
     //数据刷新
     [self setupRefreash];
 }
-//下拉刷新
+//删除通知
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+//设置刷新
 -(void)setupRefreash{
     //headerView
     UIView * headerView = [[UIView alloc] init];
@@ -86,25 +112,37 @@
     [self tabBarButtonDidRepeatClick];
 }
 
--(void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark - 代理方法
+#pragma mark - tableView代理方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(self.dataCount ==0 )self.footerView.hidden = YES;
-    return self.dataCount;
+    // 根据数据量显示或者隐藏footer
+    self.footerView.hidden = (self.topics.count == 0);
+    return self.topics.count;
+    
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@--%zd",self.class,indexPath.row];
+    XMGTopicCell * cell = [tableView dequeueReusableCellWithIdentifier:XMGTopicCellID];
+    cell.topic = self.topics[indexPath.row];
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    XMGTopic * topic = self.topics[indexPath.row];
+    return topic.cellHeight;
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     //监听拖拽
     [self setupHeader];
     [self setupFooter];
+}
+//松开scrollView调用
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+    CGFloat offsetY = -(self.tableView.contentInset.top + self.headerView.xmg_height);
+    if(self.tableView.contentOffset.y<=offsetY){
+        //上拉开始刷新
+        [self headerBeginRefreshing];
+    }
 }
 //处理header
 -(void)setupHeader{
@@ -116,21 +154,11 @@
         self.headerLabel.text = @"下拉可以加载更多";
     }
 }
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
-    CGFloat offsetY = -(self.tableView.contentInset.top + self.headerView.xmg_height);
-    if(self.tableView.contentOffset.y<=offsetY){
-        //上拉开始刷新
-        [self headerBeginRefreshing];
-    }
-}
 //处理foot
 -(void)setupFooter{
     //刚开始加载时候ContentSize为0
     if(self.tableView.contentSize.height==0)return;
-    //防止多次发送请求
-    if(self.isFooterRefreashing)return;
-    CGFloat offsetY = self.tableView.contentSize.height+self.tableView.contentInset.bottom - self.tableView.frame.size.height;
+    CGFloat offsetY = self.tableView.contentSize.height+self.tableView.contentInset.bottom - self.tableView.xmg_height;
     if(self.tableView.contentOffset.y>=offsetY && self.tableView.contentOffset.y>-(self.tableView.contentInset.top)){
         [self footerBeginRefreshing];
     }
@@ -138,26 +166,61 @@
 #pragma mark -数据处理
 //下拉
 -(void)loadNewData{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.dataCount = 20;
+    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+    NSMutableDictionary * attr = [NSMutableDictionary dictionary];
+    attr[@"a"]=@"list";
+    attr[@"c"]=@"data";
+    attr[@"type"]=@"1";
+    
+    self.mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [self.mgr GET:XMGCommonURL parameters:attr progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.maxtime =responseObject[@"info"][@"maxtime"];
+        
+        NSMutableArray * arr= [XMGTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        self.topics = arr;
+        //刷新表格
         [self.tableView reloadData];
+        [self headerEndRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if(error.code!=NSURLErrorCancelled){
+            [SVProgressHUD showErrorWithStatus:@"请求失败"];
+        }
         //结束刷新
         [self headerEndRefreshing];
-    });
-    
+    }];
 }
+
 //上拉
 -(void)loadMoreData{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.dataCount += 5;
+    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+    NSMutableDictionary * attr = [NSMutableDictionary dictionary];
+    attr[@"a"]=@"list";
+    attr[@"c"]=@"data";
+    attr[@"type"]=@"1";
+    attr[@"maxtime"]=self.maxtime;
+    self.mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [self.mgr GET:XMGCommonURL parameters:attr progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.maxtime =responseObject[@"info"][@"maxtime"];
+        
+        NSMutableArray * arr= [XMGTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.topics addObjectsFromArray:arr];
+        //刷新表格
         [self.tableView reloadData];
         //结束刷新
         [self footerEndRefreshing];
-    });
-    
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if(error.code!=NSURLErrorCancelled){
+            [SVProgressHUD showErrorWithStatus:@"请求失败"];
+        }
+        //结束刷新
+        [self footerEndRefreshing];
+    }];
 }
-#pragma mark - header
+
+#pragma mark - header刷新操作
 -(void)headerBeginRefreshing{
+    //如果正在上拉
     if(self.isHeaderRefreashing) return;
     self.headerLabel.text = @"正在刷新..";
     self.headerView.backgroundColor = [UIColor grayColor];
@@ -167,7 +230,7 @@
         UIEdgeInsets inset = self.tableView.contentInset;
         inset.top += self.headerView.xmg_height;
         self.tableView.contentInset = inset;
-        //修改偏移量
+        //修改偏移量  点击TabBar时候实现刷新  不设置偏移的话 不会进行页面刷新
         self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, -inset.top);
     }];
     //发送请求给服务器
@@ -182,10 +245,9 @@
         self.tableView.contentInset = inset;
         self.headerView.backgroundColor = [UIColor redColor];
     }];
-    
 }
 
-#pragma mark - footer
+#pragma mark - footer刷新操作
 -(void)footerBeginRefreshing{
     //如果正在上拉...
     if(self.isFooterRefreashing) return;

@@ -11,4 +11,5 @@
 @interface UIImage (Ex)
 + (instancetype)originalImage:(NSString *)imgName;
 +(instancetype)slipImage:(NSString *)imgName;
+-(instancetype)circleImage;
 @end

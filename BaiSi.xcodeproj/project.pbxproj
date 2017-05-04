@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D475A1EE48382A1200497FDA /* Pods_BaiSi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAE7F343356EB12A81367BB /* Pods_BaiSi.framework */; };
+		EF30461E1EB8459100C47E2D /* XMGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF30461D1EB8459100C47E2D /* XMGTopicCell.m */; };
 		EF5121A41EADE6E700CF4311 /* XMGLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5121A31EADE6E700CF4311 /* XMGLoginField.m */; };
 		EF5121A71EADF23E00CF4311 /* UITextField+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5121A61EADF23E00CF4311 /* UITextField+placeholder.m */; };
 		EF6EA8B11EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6EA8AF1EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m */; };
@@ -18,6 +19,7 @@
 		EF6EA8BE1EAD9EF000D1FDA6 /* XMGFastLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EA8BD1EAD9EF000D1FDA6 /* XMGFastLogin.xib */; };
 		EF6EA8C11EADA55A00D1FDA6 /* XMGFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6EA8C01EADA55A00D1FDA6 /* XMGFastButton.m */; };
 		EF99B00F1EAC922A002E45C2 /* XMGADitem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF99B00E1EAC922A002E45C2 /* XMGADitem.m */; };
+		EFA015051EB9C1B300C000C5 /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA015041EB9C1B300C000C5 /* XMGTopicCell.xib */; };
 		EFB5332A1EAB40AA006DF711 /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB533291EAB40AA006DF711 /* XMGTabBar.m */; };
 		EFB5332D1EAB7879006DF711 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB5332C1EAB7879006DF711 /* UIView+Frame.m */; };
 		EFB533311EAB8070006DF711 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB533301EAB8070006DF711 /* UIBarButtonItem+item.m */; };
@@ -68,6 +70,13 @@
 		EFE525891EAF0A00009EEB13 /* XMGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE525871EAF0A00009EEB13 /* XMGWebViewController.m */; };
 		EFE5258A1EAF0A00009EEB13 /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFE525881EAF0A00009EEB13 /* XMGWebViewController.xib */; };
 		EFE9872E1EAF881C00FA4D10 /* XMGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE9872D1EAF881C00FA4D10 /* XMGFileTool.m */; };
+		EFFAAD961EBAFB0400E1ADE8 /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFAAD951EBAFB0400E1ADE8 /* XMGTopicVideoView.m */; };
+		EFFAAD9B1EBAFB7F00E1ADE8 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFAAD9A1EBAFB7F00E1ADE8 /* XMGTopicVoiceView.m */; };
+		EFFAADA01EBAFBA000E1ADE8 /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFAAD9F1EBAFBA000E1ADE8 /* XMGTopicPictureView.m */; };
+		EFFAADA61EBB185500E1ADE8 /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFAADA31EBB185500E1ADE8 /* XMGTopicPictureView.xib */; };
+		EFFAADA71EBB185500E1ADE8 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFAADA41EBB185500E1ADE8 /* XMGTopicVideoView.xib */; };
+		EFFAADA81EBB185500E1ADE8 /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFAADA51EBB185500E1ADE8 /* XMGTopicVoiceView.xib */; };
+		EFFD8FA31EB30B77001A81A5 /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFD8FA21EB30B77001A81A5 /* XMGTopic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +100,8 @@
 		03A74F708A5D4476C9852061 /* Pods-BaiSi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSi/Pods-BaiSi.debug.xcconfig"; sourceTree = "<group>"; };
 		0DAE7F343356EB12A81367BB /* Pods_BaiSi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaiSi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48DDD723FB92A1E1EB5C749 /* Pods-BaiSi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSi.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSi/Pods-BaiSi.release.xcconfig"; sourceTree = "<group>"; };
+		EF30461C1EB8459100C47E2D /* XMGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicCell.h; sourceTree = "<group>"; };
+		EF30461D1EB8459100C47E2D /* XMGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicCell.m; sourceTree = "<group>"; };
 		EF5121A21EADE6E700CF4311 /* XMGLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginField.h; sourceTree = "<group>"; };
 		EF5121A31EADE6E700CF4311 /* XMGLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginField.m; sourceTree = "<group>"; };
 		EF5121A51EADF23E00CF4311 /* UITextField+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+placeholder.h"; sourceTree = "<group>"; };
@@ -108,6 +119,7 @@
 		EF6EA8C01EADA55A00D1FDA6 /* XMGFastButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFastButton.m; sourceTree = "<group>"; };
 		EF99B00D1EAC922A002E45C2 /* XMGADitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGADitem.h; sourceTree = "<group>"; };
 		EF99B00E1EAC922A002E45C2 /* XMGADitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGADitem.m; sourceTree = "<group>"; };
+		EFA015041EB9C1B300C000C5 /* XMGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicCell.xib; sourceTree = "<group>"; };
 		EFB533281EAB40AA006DF711 /* XMGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
 		EFB533291EAB40AA006DF711 /* XMGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 		EFB5332B1EAB7879006DF711 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -196,6 +208,17 @@
 		EFE525881EAF0A00009EEB13 /* XMGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGWebViewController.xib; sourceTree = "<group>"; };
 		EFE9872C1EAF881C00FA4D10 /* XMGFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFileTool.h; sourceTree = "<group>"; };
 		EFE9872D1EAF881C00FA4D10 /* XMGFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFileTool.m; sourceTree = "<group>"; };
+		EFFAAD941EBAFB0400E1ADE8 /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
+		EFFAAD951EBAFB0400E1ADE8 /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
+		EFFAAD991EBAFB7F00E1ADE8 /* XMGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVoiceView.h; sourceTree = "<group>"; };
+		EFFAAD9A1EBAFB7F00E1ADE8 /* XMGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVoiceView.m; sourceTree = "<group>"; };
+		EFFAAD9E1EBAFBA000E1ADE8 /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
+		EFFAAD9F1EBAFBA000E1ADE8 /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
+		EFFAADA31EBB185500E1ADE8 /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
+		EFFAADA41EBB185500E1ADE8 /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
+		EFFAADA51EBB185500E1ADE8 /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
+		EFFD8FA11EB30B77001A81A5 /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
+		EFFD8FA21EB30B77001A81A5 /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,6 +498,8 @@
 		EFCFA40D1EAA29A100732EC9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFFD8FA11EB30B77001A81A5 /* XMGTopic.h */,
+				EFFD8FA21EB30B77001A81A5 /* XMGTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,8 +507,20 @@
 		EFCFA40E1EAA29A100732EC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFA015041EB9C1B300C000C5 /* XMGTopicCell.xib */,
 				EFC3A1FE1EB06F2D003D12F4 /* XMGButton.h */,
 				EFC3A1FF1EB06F2D003D12F4 /* XMGButton.m */,
+				EF30461C1EB8459100C47E2D /* XMGTopicCell.h */,
+				EF30461D1EB8459100C47E2D /* XMGTopicCell.m */,
+				EFFAAD941EBAFB0400E1ADE8 /* XMGTopicVideoView.h */,
+				EFFAAD951EBAFB0400E1ADE8 /* XMGTopicVideoView.m */,
+				EFFAADA41EBB185500E1ADE8 /* XMGTopicVideoView.xib */,
+				EFFAAD991EBAFB7F00E1ADE8 /* XMGTopicVoiceView.h */,
+				EFFAAD9A1EBAFB7F00E1ADE8 /* XMGTopicVoiceView.m */,
+				EFFAADA51EBB185500E1ADE8 /* XMGTopicVoiceView.xib */,
+				EFFAAD9E1EBAFBA000E1ADE8 /* XMGTopicPictureView.h */,
+				EFFAAD9F1EBAFBA000E1ADE8 /* XMGTopicPictureView.m */,
+				EFFAADA31EBB185500E1ADE8 /* XMGTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,21 +879,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA015051EB9C1B300C000C5 /* XMGTopicCell.xib in Resources */,
 				EFC0BE551EACEBF4000D4152 /* XMGFriendTrendViewController.xib in Resources */,
 				EFC8F3A51EAC767000423ED7 /* XMGAdViewController.xib in Resources */,
 				EF6EA8B91EAD8BD700D1FDA6 /* XMGLoginRegistrView.xib in Resources */,
 				EFC635DB1EAE1D2300CC0CCF /* XMGMeTableViewController.storyboard in Resources */,
 				EFC8F3B21EAC7B1C00423ED7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				EFFAADA61EBB185500E1ADE8 /* XMGTopicPictureView.xib in Resources */,
 				EF6EA8BE1EAD9EF000D1FDA6 /* XMGFastLogin.xib in Resources */,
 				EFCFA3E41EA9EFFA00732EC9 /* LaunchScreen.storyboard in Resources */,
 				EF6EA8B21EAD84D600D1FDA6 /* XMGLoginRegisterViewController.xib in Resources */,
 				EFC635E01EAE241600CC0CCF /* XMGSquareCollectionViewCell.xib in Resources */,
 				EFC8F3B41EAC7B1C00423ED7 /* LaunchImage@2x.png in Resources */,
+				EFFAADA81EBB185500E1ADE8 /* XMGTopicVoiceView.xib in Resources */,
 				EFE5258A1EAF0A00009EEB13 /* XMGWebViewController.xib in Resources */,
 				EFC0BE531EACC88C000D4152 /* XMGSubTagCell.xib in Resources */,
 				EFC8F3AF1EAC7B1C00423ED7 /* LaunchImage-700-568h@2x.png in Resources */,
 				EFC8F3B11EAC7B1C00423ED7 /* LaunchImage-800-667h@2x.png in Resources */,
 				EFC8F3AE1EAC7B1C00423ED7 /* LaunchImage-568h@2x.png in Resources */,
+				EFFAADA71EBB185500E1ADE8 /* XMGTopicVideoView.xib in Resources */,
 				EFC8F3B31EAC7B1C00423ED7 /* LaunchImage.png in Resources */,
 				EFCFA3E11EA9EFFA00732EC9 /* Assets.xcassets in Resources */,
 				EFC8F3B01EAC7B1C00423ED7 /* LaunchImage-700@2x.png in Resources */,
@@ -949,15 +990,19 @@
 				EF6EA8B51EAD8B7400D1FDA6 /* XMGLoginRegistrView.m in Sources */,
 				EF6EA8BC1EAD9ED600D1FDA6 /* XMGFastLogin.m in Sources */,
 				EFCFA43A1EAA32E900732EC9 /* XMGTabBarController.m in Sources */,
+				EFFD8FA31EB30B77001A81A5 /* XMGTopic.m in Sources */,
 				EFCFA4441EAA44E500732EC9 /* UIImage+Antialias.m in Sources */,
 				EFE525891EAF0A00009EEB13 /* XMGWebViewController.m in Sources */,
 				EF6EA8B11EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m in Sources */,
 				EFCFA4421EAA44E500732EC9 /* NSObject+Log.m in Sources */,
 				EFC3A20F1EB09363003D12F4 /* XMGVoiceViewController.m in Sources */,
+				EFFAAD9B1EBAFB7F00E1ADE8 /* XMGTopicVoiceView.m in Sources */,
 				EFE9872E1EAF881C00FA4D10 /* XMGFileTool.m in Sources */,
 				EFC3A2001EB06F2D003D12F4 /* XMGButton.m in Sources */,
 				EFB5332A1EAB40AA006DF711 /* XMGTabBar.m in Sources */,
+				EFFAADA01EBAFBA000E1ADE8 /* XMGTopicPictureView.m in Sources */,
 				EFC0BE4E1EACC265000D4152 /* XMGSubTagItem.m in Sources */,
+				EF30461E1EB8459100C47E2D /* XMGTopicCell.m in Sources */,
 				EFB5332D1EAB7879006DF711 /* UIView+Frame.m in Sources */,
 				EFC0BE4B1EACBF6B000D4152 /* XMGSubTabTableViewController.m in Sources */,
 				EFCFA42A1EAA2ABA00732EC9 /* XMGFriendTrendViewController.m in Sources */,
@@ -972,6 +1017,7 @@
 				EFC3A2121EB0938E003D12F4 /* XMGVedioViewController.m in Sources */,
 				EFC0BE521EACC88C000D4152 /* XMGSubTagCell.m in Sources */,
 				EFCFA4231EAA29A100732EC9 /* AppDelegate.m in Sources */,
+				EFFAAD961EBAFB0400E1ADE8 /* XMGTopicVideoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

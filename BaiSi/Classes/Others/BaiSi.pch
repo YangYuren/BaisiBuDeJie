@@ -35,4 +35,7 @@
 //随机产生颜色
 #define XMGRandomColor XMGColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
 
+//快速写入文件  @#filename-->@"filename"  #filename-->"filename"
+#define XMGAFNWRITETOFILE(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/yangyuren/Desktop/%@.plist",@#filename] atomically:YES];
+
 #endif /* BaiSi_pch */
