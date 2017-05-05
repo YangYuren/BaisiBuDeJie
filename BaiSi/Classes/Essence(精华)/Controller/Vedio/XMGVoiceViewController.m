@@ -202,7 +202,6 @@ static NSString * const XMGTopicCellID = @"XMGTopicCellID";
     self.mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     [self.mgr GET:XMGCommonURL parameters:attr progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         self.maxtime =responseObject[@"info"][@"maxtime"];
-        
         NSMutableArray * arr= [XMGTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:arr];
         //刷新表格

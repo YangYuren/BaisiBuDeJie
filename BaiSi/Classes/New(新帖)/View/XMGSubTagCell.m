@@ -9,6 +9,8 @@
 #import "XMGSubTagCell.h"
 #import "XMGSubTagItem.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView+Download.h"
+
 
 @interface XMGSubTagCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
@@ -32,7 +34,9 @@
 
 -(void)setItem:(XMGSubTagItem *)item{
     _item = item;
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.iconView xmg_setupHeaderImage:item.image_list];
+    //[self.iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
     self.nameView.text = item.theme_name;
     NSString * numStr = [NSString stringWithFormat:@"%@人订阅",item.sub_number];
     NSInteger num = item.sub_number.integerValue;

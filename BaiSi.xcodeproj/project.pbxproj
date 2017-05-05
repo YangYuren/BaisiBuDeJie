@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D475A1EE48382A1200497FDA /* Pods_BaiSi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAE7F343356EB12A81367BB /* Pods_BaiSi.framework */; };
 		EF30461E1EB8459100C47E2D /* XMGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF30461D1EB8459100C47E2D /* XMGTopicCell.m */; };
+		EF46D93D1EBC3D2D00302949 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = EF46D93C1EBC3D2D00302949 /* UIImageView+Download.m */; };
 		EF5121A41EADE6E700CF4311 /* XMGLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5121A31EADE6E700CF4311 /* XMGLoginField.m */; };
 		EF5121A71EADF23E00CF4311 /* UITextField+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5121A61EADF23E00CF4311 /* UITextField+placeholder.m */; };
 		EF6EA8B11EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6EA8AF1EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m */; };
@@ -102,6 +103,8 @@
 		D48DDD723FB92A1E1EB5C749 /* Pods-BaiSi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSi.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSi/Pods-BaiSi.release.xcconfig"; sourceTree = "<group>"; };
 		EF30461C1EB8459100C47E2D /* XMGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicCell.h; sourceTree = "<group>"; };
 		EF30461D1EB8459100C47E2D /* XMGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicCell.m; sourceTree = "<group>"; };
+		EF46D93B1EBC3D2D00302949 /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Download.h"; sourceTree = "<group>"; };
+		EF46D93C1EBC3D2D00302949 /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Download.m"; sourceTree = "<group>"; };
 		EF5121A21EADE6E700CF4311 /* XMGLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginField.h; sourceTree = "<group>"; };
 		EF5121A31EADE6E700CF4311 /* XMGLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginField.m; sourceTree = "<group>"; };
 		EF5121A51EADF23E00CF4311 /* UITextField+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+placeholder.h"; sourceTree = "<group>"; };
@@ -755,6 +758,8 @@
 				EFB533301EAB8070006DF711 /* UIBarButtonItem+item.m */,
 				EF5121A51EADF23E00CF4311 /* UITextField+placeholder.h */,
 				EF5121A61EADF23E00CF4311 /* UITextField+placeholder.m */,
+				EF46D93B1EBC3D2D00302949 /* UIImageView+Download.h */,
+				EF46D93C1EBC3D2D00302949 /* UIImageView+Download.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -992,6 +997,7 @@
 				EFCFA43A1EAA32E900732EC9 /* XMGTabBarController.m in Sources */,
 				EFFD8FA31EB30B77001A81A5 /* XMGTopic.m in Sources */,
 				EFCFA4441EAA44E500732EC9 /* UIImage+Antialias.m in Sources */,
+				EF46D93D1EBC3D2D00302949 /* UIImageView+Download.m in Sources */,
 				EFE525891EAF0A00009EEB13 /* XMGWebViewController.m in Sources */,
 				EF6EA8B11EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m in Sources */,
 				EFCFA4421EAA44E500732EC9 /* NSObject+Log.m in Sources */,

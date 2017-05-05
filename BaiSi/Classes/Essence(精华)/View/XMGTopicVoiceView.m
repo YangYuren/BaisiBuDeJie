@@ -10,6 +10,7 @@
 #import "XMGTopic.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AFNetworking/AFNetworking.h>
+#import "UIImageView+Download.h"
 
 @interface XMGTopicVoiceView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -29,41 +30,11 @@
 - (void)setTopic:(XMGTopic *)topic
 {
     _topic = topic;
-    // 占位图片
-    UIImage *placeholder = nil;
-    // 根据网络状态来加载图片
-    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    // 获得原图（SDWebImage的图片缓存是用图片的url字符串作为key）
-    UIImage *originImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:topic.image1];
-    // 原图已经被下载过
-    if (originImage) {
-        self.imageView.image = originImage;
-    // 原图并未下载过
-    } else {
-        if (mgr.isReachableViaWiFi) {
-            //wifi直接下载
-            [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:placeholder];
-        } else if (mgr.isReachableViaWWAN) {
-        //warning downloadOriginImageWhen3GOr4G配置项的值需要从沙盒里面获取
-            // 3G\4G网络下时候要下载原图
-            BOOL downloadOriginImageWhen3GOr4G = YES;
-            if (downloadOriginImageWhen3GOr4G) {
-                [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:placeholder];
-            } else {
-                [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image0] placeholderImage:placeholder];
-            }
-        } else { // 没有可用网络
-            UIImage *thumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:topic.image0];
-            if (thumbnailImage) { // 缩略图已经被下载过
-                self.imageView.image = thumbnailImage;
-            } else { // 没有下载过任何图片
-                // 占位图片;
-                self.imageView.image = placeholder;
-            }
-        }
-    }
     
-    // 播放数量
+    //设置图片
+    [self.imageView xmg_setOriginImageWithURL:topic.image1 andThumbnailImageWithURL:topic.image0 placeholderImage:nil];
+    
+        // 播放数量
     if (topic.playcount >= 10000) {
         self.playcountLabel.text = [NSString stringWithFormat:@"%.1f万播放", topic.playcount / 10000.0];
     } else {

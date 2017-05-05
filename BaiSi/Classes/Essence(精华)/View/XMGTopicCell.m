@@ -12,6 +12,8 @@
 #import "XMGTopicVideoView.h"
 #import "XMGTopicVoiceView.h"
 #import "XMGTopicPictureView.h"
+#import "UIImageView+Download.h"
+
 
 @interface XMGTopicCell()
 // 控件的命名 -> 功能 + 控件类型
@@ -68,10 +70,10 @@
 -(void)setTopic:(XMGTopic *)topic{
     _topic = topic;
     //顶部控件数据
-    UIImage * placeHolder = [UIImage imageNamed:@"defaultUserIcon"];
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[placeHolder circleImage] options:0 completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        self.profileImageView.image = [image circleImage];
-    }];
+    
+    //设置圆形头像
+    [self.profileImageView xmg_setupHeaderImage:topic.profile_image];
+        
     self.nameLabel.text = topic.name;
     self.passtimeLabel.text = topic.passtime;
     self.text_label.text = topic.text;
@@ -97,6 +99,7 @@
         //没有最热评论
         self.topCmtView.hidden = YES;
     }
+    
     //中间内容(防止cell循环使用 造成一些控件错乱)
     if(topic.type == XMGTopicTypePicture){
         self.pictureView.hidden = NO;

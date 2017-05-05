@@ -180,11 +180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/View/XMGTopicCell.m"
-            timestampString = "515571111.535515"
+            timestampString = "515654190.108244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "commentButton"
             landmarkType = "24">
          </BreakpointContent>
@@ -196,29 +196,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/View/XMGTopicCell.m"
-            timestampString = "515571111.535515"
+            timestampString = "515654190.108244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "repostButton"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/View/XMGTopicVoiceView.m"
-            timestampString = "515578773.29941"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-setTopic:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

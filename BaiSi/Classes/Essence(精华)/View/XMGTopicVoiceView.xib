@@ -40,7 +40,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="w5w-sQ-unU" secondAttribute="trailing" id="2gq-RS-UpB"/>
                 <constraint firstAttribute="trailing" secondItem="EKL-Sm-1k3" secondAttribute="trailing" id="3hP-R0-OUr"/>
@@ -56,9 +56,9 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="imageView" destination="EKL-Sm-1k3" id="RTG-4R-QKf"/>
-                <outlet property="playcountLabel" destination="w5w-sQ-unU" id="ANW-h2-dhV"/>
-                <outlet property="voicetimeLabel" destination="mLc-Bi-ddC" id="CII-cY-agZ"/>
+                <outlet property="imageView" destination="EKL-Sm-1k3" id="0S7-4y-nZc"/>
+                <outlet property="playcountLabel" destination="w5w-sQ-unU" id="Ym3-pI-GA6"/>
+                <outlet property="voicetimeLabel" destination="mLc-Bi-ddC" id="3OW-yI-sHo"/>
             </connections>
             <point key="canvasLocation" x="218.5" y="237"/>
         </view>
