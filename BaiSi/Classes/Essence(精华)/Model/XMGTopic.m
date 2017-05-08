@@ -27,6 +27,10 @@
     if(self.type != XMGTopicTypeWord){//(图片 声音 视频)
         CGFloat  middleW = textMaxSize.width;
         CGFloat  middleH = middleW * self.height /self.width;
+        if(middleH > XMGScreenH){//现实的一个图片超过一屏幕  就是超长图片
+            middleH = 250;
+            self.bigPicture = YES;
+        }
         CGFloat  middleY = _cellHeight;
         CGFloat  middleX = 10;
         //有先后顺序

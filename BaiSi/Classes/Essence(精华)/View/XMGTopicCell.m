@@ -103,6 +103,9 @@
     //中间内容(防止cell循环使用 造成一些控件错乱)
     if(topic.type == XMGTopicTypePicture){
         self.pictureView.hidden = NO;
+        //传值
+        self.pictureView.topic = topic;
+        
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
     }else if(topic.type ==XMGTopicTypeVoice){
@@ -114,6 +117,9 @@
         self.videoView.hidden = YES;
     }else if(topic.type ==XMGTopicTypeVideo){
         self.videoView.hidden = NO;
+        //传值
+        self.videoView.topic = topic;
+        
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
     }else{

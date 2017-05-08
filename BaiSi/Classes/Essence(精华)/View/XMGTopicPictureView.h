@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class XMGTopic;
 @interface XMGTopicPictureView : UIView
+
+@property(nonatomic,strong)XMGTopic * topic;
 
 @end

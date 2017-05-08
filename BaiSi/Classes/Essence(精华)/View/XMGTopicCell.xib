@@ -47,9 +47,6 @@
                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <state key="highlighted" image="cellmorebtnclick"/>
-                        <connections>
-                            <action selector="more" destination="KGk-i7-Jjw" eventType="touchUpInside" id="axG-Fo-cyo"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQy-XY-Vyd" userLabel="文字内容">
                         <rect key="frame" x="10" y="55" width="300" height="18"/>

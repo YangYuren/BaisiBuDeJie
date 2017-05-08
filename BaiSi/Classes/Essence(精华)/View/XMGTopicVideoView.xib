@@ -11,13 +11,71 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMGTopicVideoView">
-            <rect key="frame" x="0.0" y="0.0" width="244" height="119"/>
+        <view contentMode="scaleToFill" id="BsX-Ft-Bux" customClass="XMGTopicVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="rnD-uC-Kgy">
+                    <rect key="frame" x="0.0" y="20" width="343" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="P05-l4-bck"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWG-IA-Hxj">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUy-Pq-G5b">
+                    <rect key="frame" x="136" y="75" width="71" height="71"/>
+                    <state key="normal" image="video-play">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="playButtonClick"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4343播放" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af6-XG-i1h">
+                    <rect key="frame" x="275" y="0.0" width="68" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qf-7h-1Ah">
+                    <rect key="frame" x="302" y="204" width="41" height="18"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="JUy-Pq-G5b" secondAttribute="centerX" id="ANr-jj-avO"/>
+                <constraint firstAttribute="trailing" secondItem="hWG-IA-Hxj" secondAttribute="trailing" id="Liw-It-WKG"/>
+                <constraint firstAttribute="bottom" secondItem="hWG-IA-Hxj" secondAttribute="bottom" id="MBH-r8-nMP"/>
+                <constraint firstItem="rnD-uC-Kgy" firstAttribute="leading" secondItem="BsX-Ft-Bux" secondAttribute="leading" id="NTa-xF-BoF"/>
+                <constraint firstAttribute="trailing" secondItem="af6-XG-i1h" secondAttribute="trailing" id="Tam-2W-W9S"/>
+                <constraint firstAttribute="bottom" secondItem="9qf-7h-1Ah" secondAttribute="bottom" id="VRT-sF-k4E"/>
+                <constraint firstItem="rnD-uC-Kgy" firstAttribute="top" secondItem="BsX-Ft-Bux" secondAttribute="top" constant="20" id="Wxc-9o-7vE"/>
+                <constraint firstAttribute="trailing" secondItem="rnD-uC-Kgy" secondAttribute="trailing" id="dh1-Cw-aPl"/>
+                <constraint firstItem="hWG-IA-Hxj" firstAttribute="leading" secondItem="BsX-Ft-Bux" secondAttribute="leading" id="eRl-hu-d2J"/>
+                <constraint firstAttribute="centerY" secondItem="JUy-Pq-G5b" secondAttribute="centerY" id="jDC-8W-VEu"/>
+                <constraint firstItem="hWG-IA-Hxj" firstAttribute="top" secondItem="BsX-Ft-Bux" secondAttribute="top" id="kcy-lw-y63"/>
+                <constraint firstItem="af6-XG-i1h" firstAttribute="top" secondItem="BsX-Ft-Bux" secondAttribute="top" id="liJ-as-K8G"/>
+                <constraint firstAttribute="trailing" secondItem="9qf-7h-1Ah" secondAttribute="trailing" id="mm0-7H-K5a"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="207" y="291.5"/>
+            <connections>
+                <outlet property="imageView" destination="hWG-IA-Hxj" id="Ob7-iU-1tf"/>
+                <outlet property="playcountLabel" destination="af6-XG-i1h" id="Jpf-Fe-a4D"/>
+                <outlet property="videotimeLabel" destination="9qf-7h-1Ah" id="8hh-jw-sVz"/>
+                <outlet property="zhanweiImageView" destination="rnD-uC-Kgy" id="rCI-iG-tEF"/>
+            </connections>
+            <point key="canvasLocation" x="218.5" y="237"/>
         </view>
     </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="playButtonClick" width="63" height="63"/>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
 </document>

@@ -12,6 +12,8 @@
 		EF46D93D1EBC3D2D00302949 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = EF46D93C1EBC3D2D00302949 /* UIImageView+Download.m */; };
 		EF5121A41EADE6E700CF4311 /* XMGLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5121A31EADE6E700CF4311 /* XMGLoginField.m */; };
 		EF5121A71EADF23E00CF4311 /* UITextField+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5121A61EADF23E00CF4311 /* UITextField+placeholder.m */; };
+		EF53513B1EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5351391EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.m */; };
+		EF53513C1EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF53513A1EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.xib */; };
 		EF6EA8B11EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6EA8AF1EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m */; };
 		EF6EA8B21EAD84D600D1FDA6 /* XMGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6EA8B01EAD84D600D1FDA6 /* XMGLoginRegisterViewController.xib */; };
 		EF6EA8B51EAD8B7400D1FDA6 /* XMGLoginRegistrView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6EA8B41EAD8B7400D1FDA6 /* XMGLoginRegistrView.m */; };
@@ -109,6 +111,9 @@
 		EF5121A31EADE6E700CF4311 /* XMGLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginField.m; sourceTree = "<group>"; };
 		EF5121A51EADF23E00CF4311 /* UITextField+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+placeholder.h"; sourceTree = "<group>"; };
 		EF5121A61EADF23E00CF4311 /* UITextField+placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+placeholder.m"; sourceTree = "<group>"; };
+		EF5351381EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		EF5351391EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		EF53513A1EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 		EF6EA8AE1EAD84D600D1FDA6 /* XMGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterViewController.h; sourceTree = "<group>"; };
 		EF6EA8AF1EAD84D600D1FDA6 /* XMGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterViewController.m; sourceTree = "<group>"; };
 		EF6EA8B01EAD84D600D1FDA6 /* XMGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -487,6 +492,9 @@
 		EFCFA40C1EAA29A100732EC9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF5351381EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.h */,
+				EF5351391EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.m */,
+				EF53513A1EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.xib */,
 				EFC3A2091EB0934E003D12F4 /* Word */,
 				EFC3A2011EB092C9003D12F4 /* All */,
 				EFC3A2031EB092C9003D12F4 /* Picture */,
@@ -897,6 +905,7 @@
 				EFC635E01EAE241600CC0CCF /* XMGSquareCollectionViewCell.xib in Resources */,
 				EFC8F3B41EAC7B1C00423ED7 /* LaunchImage@2x.png in Resources */,
 				EFFAADA81EBB185500E1ADE8 /* XMGTopicVoiceView.xib in Resources */,
+				EF53513C1EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.xib in Resources */,
 				EFE5258A1EAF0A00009EEB13 /* XMGWebViewController.xib in Resources */,
 				EFC0BE531EACC88C000D4152 /* XMGSubTagCell.xib in Resources */,
 				EFC8F3AF1EAC7B1C00423ED7 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -991,6 +1000,7 @@
 				EFCFA4471EAA468200732EC9 /* UIImage+Ex.m in Sources */,
 				EFB5333B1EAB8F0B006DF711 /* XMGSettigTableViewController.m in Sources */,
 				EFCFA4301EAA2AF500732EC9 /* XMGNewViewController.m in Sources */,
+				EF53513B1EBEAC0D00D1E293 /* XMGSeeBigPictureViewController.m in Sources */,
 				EFC635DF1EAE241600CC0CCF /* XMGSquareCollectionViewCell.m in Sources */,
 				EF6EA8B51EAD8B7400D1FDA6 /* XMGLoginRegistrView.m in Sources */,
 				EF6EA8BC1EAD9ED600D1FDA6 /* XMGFastLogin.m in Sources */,

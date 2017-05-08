@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/Controller/All/XMGAllViewController.m"
-            timestampString = "515559369.068032"
+            timestampString = "515753115.732781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "-headerBeginRefreshing"
             landmarkType = "7">
          </BreakpointContent>
@@ -148,11 +148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/Controller/All/XMGAllViewController.m"
-            timestampString = "515559369.068032"
+            timestampString = "515753115.732781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "-headerBeginRefreshing"
             landmarkType = "7">
          </BreakpointContent>
@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/Controller/All/XMGAllViewController.m"
-            timestampString = "515559369.068032"
+            timestampString = "515753115.732781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
             landmarkName = "-footerBeginRefreshing"
             landmarkType = "7">
          </BreakpointContent>
@@ -203,6 +203,86 @@
             endingLineNumber = "26"
             landmarkName = "repostButton"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/View/XMGTopicVideoView.m"
+            timestampString = "515816709.677945"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-setTopic:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/Controller/XMGSeeBigPictureViewController.m"
+            timestampString = "515833768.522535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "saveButton"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[XMGSeeBigPictureViewController saveButton]"
+                  moduleName = "BaiSi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyuren/Desktop/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%85%B6%E8%A7%A3%E7%9B%B8%E5%85%B3/BaiSi/BaiSi/Classes/Essence(%E7%B2%BE%E5%8D%8E)/Controller/XMGSeeBigPictureViewController.m"
+                  timestampString = "515813484.45049"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[XMGSeeBigPictureViewController setSaveButton:]"
+                  moduleName = "BaiSi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyuren/Desktop/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%85%B6%E8%A7%A3%E7%9B%B8%E5%85%B3/BaiSi/BaiSi/Classes/Essence(%E7%B2%BE%E5%8D%8E)/Controller/XMGSeeBigPictureViewController.m"
+                  timestampString = "515813484.45205"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaiSi/Classes/Essence(&#x7cbe;&#x534e;)/Controller/XMGSeeBigPictureViewController.m"
+            timestampString = "515833768.522535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -11,11 +11,13 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+Download.h"
+#import "XMGSeeBigPictureViewController.h"
 
 @interface XMGTopicVoiceView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *voicetimeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *zhanweiImageView;
 
 @end
 
@@ -25,14 +27,26 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
-}
 
+    self.autoresizingMask = UIViewAutoresizingNone;
+    self.imageView.userInteractionEnabled =  YES;
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPic)]];
+}
+//监听方法点击  查看大图
+-(void)seeBigPic{
+    XMGSeeBigPictureViewController * vc = [[XMGSeeBigPictureViewController alloc] init];
+    vc.topic = self.topic;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+}
 - (void)setTopic:(XMGTopic *)topic
 {
     _topic = topic;
-    
+    self.zhanweiImageView.hidden = NO;
     //设置图片
-    [self.imageView xmg_setOriginImageWithURL:topic.image1 andThumbnailImageWithURL:topic.image0 placeholderImage:nil];
+    [self.imageView xmg_setOriginImageWithURL:topic.image1 andThumbnailImageWithURL:topic.image0 placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        if(!image) return ;
+        self.zhanweiImageView.hidden = YES;
+    }];
     
         // 播放数量
     if (topic.playcount >= 10000) {

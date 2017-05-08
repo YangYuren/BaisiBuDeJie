@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class XMGTopic;
 @interface XMGTopicVideoView : UIView
-
+@property(nonatomic,strong)XMGTopic *topic;
 @end

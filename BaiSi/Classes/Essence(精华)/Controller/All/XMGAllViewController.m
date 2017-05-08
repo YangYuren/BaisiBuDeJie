@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <SDWebImage/SDImageCache.h>
 #import "XMGTopic.h"
 #import "XMGTopicCell.h"
 
@@ -134,6 +135,9 @@ static NSString * const XMGTopicCellID = @"XMGTopicCellID";
     //监听拖拽
     [self setupHeader];
     [self setupFooter];
+    //清除缓存(内存)
+    [[SDImageCache sharedImageCache] clearMemory];
+    
 }
 //松开scrollView调用
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{

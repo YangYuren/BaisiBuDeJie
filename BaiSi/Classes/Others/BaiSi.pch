@@ -23,6 +23,9 @@
 
 #import "XMGAdViewController.h"
 
+//SDWebImage
+#import <SDWebImage/UIImageView+WebCache.h>
+
 /**************屏幕适配*******************/
 #define XMGScreenW [UIScreen mainScreen].bounds.size.width
 #define XMGScreenH [UIScreen mainScreen].bounds.size.height

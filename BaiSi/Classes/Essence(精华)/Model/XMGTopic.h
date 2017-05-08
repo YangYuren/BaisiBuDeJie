@@ -69,7 +69,10 @@ typedef NS_ENUM(NSUInteger, XMGTopicType) {
 //图片的frame
 @property(nonatomic,assign)CGRect middleFrame;
 
-
+//是否是动图
+@property(nonatomic,assign)BOOL  is_gif;
+//是否是超长大图
+@property(nonatomic,assign,getter=isBigPicture)BOOL  bigPicture;
 
 
 

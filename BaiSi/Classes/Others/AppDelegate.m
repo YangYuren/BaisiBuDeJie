@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XMGTabBarController.h"
-
+#import <SDWebImage/SDImageCache.h>
 
 
 @interface AppDelegate ()
@@ -23,15 +23,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     XMGTabBarController * tabBarVc = [[XMGTabBarController alloc] init];
-    XMGAdViewController * adVC = [[XMGAdViewController alloc] init];
-    
-    
+    //广告
+    //XMGAdViewController * adVC = [[XMGAdViewController alloc] init];
     
     self.window.rootViewController = tabBarVc;
+//    //每次启动程序清除缓存
+//    [[SDImageCache sharedImageCache] clearMemory];
     
     //显示窗口
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
